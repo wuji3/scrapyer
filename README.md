@@ -1,6 +1,3 @@
-## reference
-https://docs.scrapy.org/en/latest/
-
 ## install
 conda install -c conda-forge scrapy
 
@@ -120,3 +117,6 @@ _middleware_ -> spider中间件和download中间件 download中间件用于请�
 ```shell
 scrapy crawl xxx -o xxx.csv/xxx.json
 ```
+
+## reference
+https://docs.scrapy.org/en/latest/
