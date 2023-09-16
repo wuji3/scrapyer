@@ -1,3 +1,6 @@
+## reference
+https://docs.scrapy.org/en/latest/
+
 ## install
 conda install -c conda-forge scrapy
 
