@@ -129,5 +129,8 @@ scrapy crawl csvspider -s IMAGES_STORE=crawled_images # 若不在setting里设�
 scrapy crawl XXXspider -s LOG_LEVEL=DEBUG -s LOG_FILE=log.txt
 ```
 
+## performance
+CONCURRENT_REQUESTS = 32, 下载 4965 张图( 3.83G ), 耗时 658 seconds
+
 ## reference
 https://docs.scrapy.org/en/latest/
