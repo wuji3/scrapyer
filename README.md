@@ -1,13 +1,16 @@
-## install
-conda install -c conda-forge scrapy
+## install  
+conda create -n scrapy python=3.9  
+conda activate scrapy  
+conda install -c conda-forge scrapy  
+conda install pandas  
+conda install Pillow # 确保pillow >= 4.0.0 不然不会启动ImagePipeline
 
-## start a project
-```shell
-scrapy startproject xxx
-```
+## tips >> 勿忘setting 否则不生效 尤其是pipeline
+csvspider爬图只需要关注spiders、items、pipelines和settings
 
 ## coding
-1. **spiders**⭐⭐⭐
+1. spiders⭐⭐⭐
+```
 ```python
 class XXX(scrapy.Spider):
     name = 'xxx' # 爬虫的名字 与启动时保持一致
@@ -105,6 +108,8 @@ ITEM_PIPELINES = {
 DOWNLOADER_MIDDLEWARES = {
    "colorHub.middlewares.ColorhubDownloaderMiddleware": 543,
 }
+# 图像保存路径
+IMAGES_STORE = "crawled_images"
 ```
 
 ## scrapy-frame conclusion
@@ -112,10 +117,16 @@ _spider_ -> spider的start_request把请求yield出去 拿到response交给callb
 _pipeline_ -> pipeline在spider启动前和启动后都有对应的hook可以做点事情 核心函数是process_item  处理spider解析好的item  
 _middleware_ -> spider中间件和download中间件 download中间件用于请求拦截[process_request]和响应拦截[response_request] 比如请求拦截可以用于伪装请求 加代理或加cookie  
 
-
 ## run
 ```shell
 scrapy crawl xxx -o xxx.csv/xxx.json
+scrapy crawl csvspider -s IMAGES_STORE=crawled_images # 若不在setting里设置图像保存目录 也可以通过命令传送 -s表setting
+```
+
+## log
+出现问题时 把log打出来
+```shell
+scrapy crawl XXXspider -s LOG_LEVEL=DEBUG -s LOG_FILE=log.txt
 ```
 
 ## reference
