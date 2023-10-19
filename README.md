@@ -5,8 +5,9 @@ conda install -c conda-forge scrapy
 conda install pandas  
 conda install Pillow # 确保pillow >= 4.0.0 不然不会启动ImagePipeline
 
-## tips >> 勿忘setting 否则不生效 尤其是pipeline
-csvspider爬图只需要关注spiders、items、pipelines和settings
+## tips
+_csvspider_ 爬图只需要关注spiders、items、pipelines和settings  
+>注意： spider中url是否正确？pipeline请求的url是否正确？(若设置)图像名称是否正确？setting是否设置pipeline？
 
 ## coding
 1. spiders⭐⭐⭐
