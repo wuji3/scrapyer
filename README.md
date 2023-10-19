@@ -121,7 +121,9 @@ _middleware_ -> spider中间件和download中间件 download中间件用于请�
 ## run
 ```shell
 scrapy crawl xxx -o xxx.csv/xxx.json
-scrapy crawl csvspider -s IMAGES_STORE=crawled_images # 若不在setting里设置图像保存目录 也可以通过命令传送 -s表setting
+# 若不在setting里设置图像保存目录 也可以通过命令传送 -s表setting
+# -s IMAGES_STORE=crawled_images 不需要先手动创建文件夹 若不存在会自动创建
+scrapy crawl csvspider -s IMAGES_STORE=crawled_images 
 ```
 
 ## log
