@@ -1,4 +1,4 @@
-# Scrapy settings for colorHub project
+# Scrapy settings for common project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "colorHub"
+BOT_NAME = "common"
 
-SPIDER_MODULES = ["colorHub.spiders"]
-NEWSPIDER_MODULE = "colorHub.spiders"
+SPIDER_MODULES = ["common.spiders"]
+NEWSPIDER_MODULE = "common.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "colorHub (+http://www.yourdomain.com)"
+#USER_AGENT = "common (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -46,13 +46,13 @@ DEFAULT_REQUEST_HEADERS = {
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "colorHub.middlewares.ColorhubSpiderMiddleware": 543,
+#    "common.middlewares.ColorhubSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "colorHub.middlewares.ColorhubDownloaderMiddleware": 543,
+#    "common.middlewares.ColorhubDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -64,7 +64,7 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "colorHub.pipelines.ImagePipeline": 300,
+   "common.pipelines.ImagePipeline": 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

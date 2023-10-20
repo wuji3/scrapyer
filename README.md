@@ -104,10 +104,10 @@ CONCURRENT_REQUESTS = 32 # 配置好的话可以设高点 default=16
 # 请求 数字越小优先级越高 响应 数字越大优先级越高
 
 ITEM_PIPELINES = {
-   "colorHub.pipelines.ImagePipeline": 300, 
+   "common.pipelines.ImagePipeline": 300, 
 } 
 DOWNLOADER_MIDDLEWARES = {
-   "colorHub.middlewares.ColorhubDownloaderMiddleware": 543,
+   "common.middlewares.ColorhubDownloaderMiddleware": 543,
 }
 # 图像保存路径
 IMAGES_STORE = "crawled_images"
@@ -120,10 +120,14 @@ _middleware_ -> spider中间件和download中间件 download中间件用于请�
 
 ## run
 ```shell
+> first methord
 scrapy crawl xxx -o xxx.csv/xxx.json
-# 若不在setting里设置图像保存目录 也可以通过命令传送 -s表setting
-# -s IMAGES_STORE=crawled_images 不需要先手动创建文件夹 若不存在会自动创建
+
+> seconde methord # 若不在setting里设置图像保存目录 也可以通过命令传送 -s表setting -s IMAGES_STORE=crawled_images 不需要先手动创建文件夹 若不存在会自动创建
 scrapy crawl csvspider -s IMAGES_STORE=crawled_images 
+
+> third methord # 通过python脚本启动
+python main.py
 ```
 
 ## log

@@ -8,7 +8,7 @@ import scrapy
 """
 继承scrapy.Item 注册class.attr 然后在spider中yield出去 属性名要一一对应
 """
-class ColorhubItem(scrapy.Item):
+class CommonItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     img_name: str = scrapy.Field()

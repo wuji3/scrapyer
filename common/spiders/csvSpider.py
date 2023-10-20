@@ -1,5 +1,5 @@
 import scrapy
-from colorHub.items import ColorhubItem
+from common.items import CommonItem
 
 """
 这个爬虫->读本地csv->包装成item再yield给ImagesPipeline下载图片
@@ -22,7 +22,7 @@ class CSVSpider(scrapy.Spider):
 
     def parse(self, response, **kwargs):
         for idx in range(self.df.shape[0]):
-            item = ColorhubItem()
+            item = CommonItem()
             item['img_name'] = self.df.loc[idx, 'img_name']
             item['img_url'] = self.df.loc[idx, 'img_url']
             yield item
