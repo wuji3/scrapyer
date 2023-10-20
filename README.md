@@ -134,6 +134,7 @@ scrapy crawl XXXspider -s LOG_LEVEL=DEBUG -s LOG_FILE=log.txt
 
 ## performance
 CONCURRENT_REQUESTS = 32, 下载 4965 张图( 3.83G | 2MB / Image ), 耗时 658 seconds
+CONCURRENT_REQUESTS = 32, 下载 239w 张图( 131.0G | 0.1MB / Image ), 耗时 47949 seconds
 
 ## reference
 https://docs.scrapy.org/en/latest/
