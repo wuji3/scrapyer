@@ -49,7 +49,7 @@ class ScrapyDownloader:
 if __name__ == '__main__':
     # # read setting
     # setting = get_project_settings()
-    # setting.attributes['IMAGES_STORE'] = SettingsAttribute('/home/jwalgo/duke/headimg_detect/{date}/images'.format(date = datetime.datetime.now().strftime("%Y-%m-%d")), 300)
+    # setting.attributes['IMAGES_STORE'] = SettingsAttribute('/home/xxx/xxx/{date}/images'.format(date = datetime.datetime.now().strftime("%Y-%m-%d")), 300)
     # # init project
     # process = CrawlerProcess(setting)
     # # init spider
