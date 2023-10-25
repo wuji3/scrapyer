@@ -127,7 +127,7 @@ scrapy crawl xxx -o xxx.csv/xxx.json
 scrapy crawl csvspider -s IMAGES_STORE=crawled_images 
 
 > third methord # 通过python脚本启动
-python main.py
+python scrapy_script.py
 ```
 
 ## log
