@@ -26,7 +26,7 @@ from scrapy.settings import SettingsAttribute
 from common.spiders.csvSpider import CSVSpider
 
 #-------若作为module, 则设置scrapy的环境变量 让scrapy读到自己的settings-------#
-os.environ['SCRAPY_SETTINGS_MODULE'] = 'project.common.settings'
+os.environ['SCRAPY_SETTINGS_MODULE'] = 'scrapyer.common.settings'
 #-----------------------------------------------------------------------#
 
 class ScrapyDownloader:
