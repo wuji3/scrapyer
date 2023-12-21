@@ -52,5 +52,16 @@ class ImagePipeline(ImagesPipeline):
                 },
             ),
         """
+        #-------------------------------------------若有缩放图像的需求----------------------------------------------------#
+        # import os
+        # from PIL import Image
+        # # xxx 即图像文件夹存储文件夹 即scrapy crawl spider -s IMAGES_STORE=xxx
+        # img_path = os.path.join('xxx', results[0][1]['path'])
+        # if os.path.isfile(img_path):
+        #     image = Image.open(img_path).convert('RGB')
+        #     image = image.resize(size=(1280, 1280), resample=1)
+        #     image.save(img_path)
+        #--------------------------------------------------------------------------------------------------------------#
+
         # 没特殊需求时 用默认的方法就可以
         return super().item_completed(results, item, info)
