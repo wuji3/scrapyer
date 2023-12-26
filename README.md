@@ -130,6 +130,10 @@ scrapy crawl csvspider -s IMAGES_STORE=crawled_images
 python scrapy_script.py
 ```
 
+## 代理网站
+> https://www.colorhub.me  
+> https://car.autohome.com.cn/pic/series/391.html
+
 ## log
 出现问题时 把log打出来
 ```shell
