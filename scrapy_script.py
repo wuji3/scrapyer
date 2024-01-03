@@ -19,7 +19,8 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 #-------------------------------------------------------------------#
-
+from typing import Union
+from scrapy import Spider
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from scrapy.settings import SettingsAttribute
@@ -30,7 +31,7 @@ os.environ['SCRAPY_SETTINGS_MODULE'] = 'scrapyer.common.settings'
 #-----------------------------------------------------------------------#
 
 class ScrapyDownloader:
-    def __init__(self, image_src: str):
+    def __init__(self, image_src: str, spider: Union[Spider, str]): # CSVSpider / "csvspider"
         self.image_src = image_src
 
         setting = get_project_settings()
@@ -39,7 +40,7 @@ class ScrapyDownloader:
         process = CrawlerProcess(setting)
 
         # init spider
-        process.crawl(CSVSpider)
+        process.crawl(spider)
 
         self.process = process
 
