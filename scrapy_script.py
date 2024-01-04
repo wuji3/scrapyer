@@ -31,11 +31,12 @@ os.environ['SCRAPY_SETTINGS_MODULE'] = 'scrapyer.common.settings'
 #-----------------------------------------------------------------------#
 
 class ScrapyDownloader:
-    def __init__(self, image_src: str, spider: Union[Spider, str]): # CSVSpider / "csvspider"
+    def __init__(self, image_src: str, spider: Union[Spider, str], logtxt: str): # CSVSpider / "csvspider"
         self.image_src = image_src
 
         setting = get_project_settings()
         setting.attributes['IMAGES_STORE'] = SettingsAttribute(image_src, 300)
+        setting.attributes['LOG_FILE'] = SettingsAttribute(logtxt, 300)
 
         process = CrawlerProcess(setting)
 
