@@ -9,6 +9,9 @@ conda install Pillow # 确保pillow >= 4.0.0 不然不会启动ImagePipeline
 _csvspider_ 爬图只需要关注spiders、items、pipelines和settings  
 >注意： spider中url是否正确？pipeline请求的url是否正确？(若设置)图像名称是否正确？setting是否设置pipeline？
 
+_csvspider_ 爬图用到的源csv 若用带/符号命名的图像
+>注意： 如图像名称为(id_图片带有logo/水印/表情包，请修改后重新提交.jpg),/会被认为目录分级 下载下来是 id_图片带有logo[文件夹]->水印[文件夹]->表情包，请修改后重新提交.jpg[文件]
+
 ## coding
 1. spiders⭐⭐⭐
 ```
